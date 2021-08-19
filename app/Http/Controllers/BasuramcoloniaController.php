@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; //!C1
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PostController extends Controller
+class BasuramcoloniaController extends Controller 
 {
-    public function getAllPost()
+    public function getAllColonia()
     {
         $colonias = DB::table('basuramcolonia')->get();
         return view('vcolonias', compact('colonias'));
     }
+    
 }

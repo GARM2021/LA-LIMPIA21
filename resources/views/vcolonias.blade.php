@@ -7,6 +7,7 @@
     <title>Colonias</title>
 </head>
 <body>
+    {{-- C1 --}}
     <h1> All Colonias</h1>
     @foreach ($colonias as $colonia )
     <h3>{{ $colonia->colonia }}</h3>

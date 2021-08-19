@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BasuramcoloniaController; //!C1
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/practice-1', 'PraciceOneController@index');*/
 
-/*Route::view('/practice_one_view',   [PraciceOneController::class, 'index'  ]);*/
-Route::get('/colonias', [PostController::class,'getAllPost'])->name('colonia.getallpost');//!CORRECTO EJEMPLO 
+
+Route::get('/colonias',[BasuramcoloniaController::class, 'getAllColonia'])->name('colonia.getallColonia'); //!C1
