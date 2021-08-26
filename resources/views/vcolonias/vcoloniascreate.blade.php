@@ -15,5 +15,6 @@
         <div class="form-row mt-3" >
             <button type="submit" class="btn btn-primary btn-lg">Create colonia</button>
         </div>
+        
     </form>
     @endsection

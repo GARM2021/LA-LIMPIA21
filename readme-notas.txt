@@ -78,3 +78,16 @@ Route::get('all-posts',[BasuramcoloniaController::class,'getAllColoniasUsingMode
 --------------------------------------------------------------------------------------------
  C2 L49
 D:\xampp\htdocs\LA-LIMPIA21>php artisan make:request ColoniaRequest  //! C2 L49
+--------------------------------------------------------------------------------------------
+
+C3 L48
+Si contáis con problemas para añadir los Route::resource();
+ mira que no tengáis comentada en
+ App\providers\RouteServiceProvider.php -> protected $namespace = 'App\\Http\\Controllers';
+
+ y ademas le di para limpiar el cache 
+
+  php artisan optimize:clear
+
+--------------------------------------------------------------------------------------------
+

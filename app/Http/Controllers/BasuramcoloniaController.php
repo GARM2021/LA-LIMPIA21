@@ -15,19 +15,19 @@ class BasuramcoloniaController extends Controller
     //      $colonias = DB::table('basuramcolonia')->get();
     //     return view('vcolonias', compact('colonias'));
     // }
-    public function coloniasIndex()
+    public function index()
     {
         $colonias = Basuramcolonia::all();
         return view('vcolonias.vcoloniasindex', compact('colonias'));
     }
 
-    public function getAllColoniasUsingModel() //!C2s
+    //public function getAllColoniasUsingModel() //!C2s
+    
+   // {
+    //    $colonias = Basuramcolonia::all();
 
-    {
-        $colonias = Basuramcolonia::all();
-        // return $colonias;
-        return view('vcolonias', compact('colonias'));
-    }
+   //     return view('vcolonias', compact('colonias'));
+   // }
 
     public function create() //!C2 L17
     {
@@ -36,38 +36,45 @@ class BasuramcoloniaController extends Controller
 
     public function store(ColoniaRequest $request) //!C2 L17
     {
-       $colonia = Basuramcolonia::create($request->validated());//! c49 asi quedo con formrequest
-       
-       return redirect()
-       ->route('colonias.index') //! route Este es el recomendado es mas dificil que cambie el nombre de la route 
-       ->withSuccess("The new colonia with id {$colonia->colonia} was created succesx");  // ! C2
-   
+        $colonia = Basuramcolonia::create($request->validated()); //! c49 asi quedo con formrequest
 
-     
+        return redirect()
+            ->route('colonias.index') //! route Este es el recomendado es mas dificil que cambie el nombre de la route 
+            ->withSuccess("The new colonia with id {$colonia->colonia} was created succesx");  // ! C2
     }
-    
-    public function edit(ColoniaRequest $request, Basuramcolonia $colonia) //!C2 L17
-    {
-       
-       // return 'show desde edit';
-     
 
-       return view('vcolonias.vcoloniasedit')->with([  //!C2 L33
-         
-           'colonia' => $colonia,
+    public function edit(Basuramcolonia $colonia) //!C2 L17 L47
+    {
+        return view('vcolonias.vcoloniasedit')->with([  //!C2 L33 
+
+            'colonia' => $colonia,
         ]);
     }
-    public function update(Basuramcolonia $colonia) //!C2 L17
+    public function update($colonia) //!C2 L17
     {
-        return 'update desde controlador';
-     //$colonia->update($request->validate());
+        $colonia = Basuramcolonia::findOrFail($colonia); //!C3 L33 
+
+        //return 'update desde controlador';
+        $colonia->update(request()->all()); //!C3 L33
+
+        return redirect()
+            ->route('colonias.index') //! route Este es el recomendado es mas dificil que cambie el nombre de la route 
+            ->withSuccess("The  colonia with id {$colonia->colonia} was modificated succesx");
     }
-    public function show() //!C2 L17
+    public function show(Basuramcolonia $colonia) //!C3 L17 L47
     {
-        return  'show desde controlador'  ;
+        return view('vcolonias.vcoloniasshow')->with([  //!C3 L33
+
+            'colonia' => $colonia,
+        ]);
     }
-    public function destroy() //!C2 L17
+    public function destroy($colonia) //!C3 L35
     {
-        return 'destroy desde controlador';
+        $colonia = Basuramcolonia::findOrFail($colonia);
+
+        $colonia->delete();
+
+        return $colonia;
+        
     }
 }
