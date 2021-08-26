@@ -37,3 +37,44 @@ DB FIRST
 3.1 Route::get('/posts', [XxxController::class,'getAllPost'])->name('post.getallpost');//!CORRECTO EJEMPLO 
 
 ------------------------------------------------------------------------
+===================================================================
+Model
+1-php artisan make:Model Post // primera letra mayuscula
+2- <?php
+
+namespace App\Models; 
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    protected $table = 'posts';
+
+}
+3- PostController
+ <?php
+
+namespace App\Http\Controllers; //!C1
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Post; //!C2
+
+class PostController extends Controller 
+{
+    ......
+
+    public function getAllPostsUsingModel() //!C2
+    {
+        $posts = Post::all();
+        return $posts;
+    }
+}
+4- web.php
+Route::get('all-posts',[BasuramcoloniaController::class,'getAllColoniasUsingModel'])->name('allcolonias-model');
+--------------------------------------------------------------------------------------------
+ C2 L49
+D:\xampp\htdocs\LA-LIMPIA21>php artisan make:request ColoniaRequest  //! C2 L49
