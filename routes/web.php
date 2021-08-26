@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BasuramcoloniaController; //!C1
+use App\Http\Controllers\BasuramgestorController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,19 @@ Route::match(['put', 'patch'],'colonias/{colonia}',[BasuramcoloniaController::cl
 Route::get('/colonias/{colonia}/show',[BasuramcoloniaController::class,'show'])->name('colonias.show');//!C2 L17
 
 Route::delete('/colonias/{colonia}/destroy',[BasuramcoloniaController::class,'destroy'])->name('colonias.destroy');*/  //!C2 L17 
+
+/////////////////////////////////////////////////////////////////////
+
+Route::get('gestores','BasuramgestorController@index')->name('gestores.index');//!C2 L17
+
+Route::post('gestores/store','BasuramgestorController@store')->name('gestores.store');//!C2 L17
+
+Route::get('gestores/create','BasuramgestorController@create')->name('gestores.create');//!C2 L17
+
+Route::get('gestores/{gestor}/edit','BasuramgestorController@edit')->name('gestores.edit');//!C2 L17
+
+Route::match(['put', 'patch'],'gestores/{gestor}/update','BasuramgestorController@update')->name('gestores.update');//!C2 L17
+
+Route::get('/gestores/{gestor}/show','BasuramgestorController@show')->name('gestores.show');//!C2 L17
+
+Route::delete('/gestores/{gestor}/destroy','BasuramgestorController@destroy')->name('gestores.destroy'); 

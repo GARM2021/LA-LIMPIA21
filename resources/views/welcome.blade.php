@@ -25,8 +25,9 @@
             Limpia 21 
         </div>
         <div class="links">
-            <a href="/practice-1">Practica1</a>
-            <a href="/practice-2">Practica2</a>
+            <a href="/colonias">Catalogo - Colonias</a> {{-- C4 --}}
+            <br>
+            <a href="/gestores">Catalogo - Gestores</a>
 
         </div>
     </body>

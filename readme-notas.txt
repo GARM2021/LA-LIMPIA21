@@ -90,4 +90,20 @@ Si contáis con problemas para añadir los Route::resource();
   php artisan optimize:clear
 
 --------------------------------------------------------------------------------------------
+C4
+ en GestorRequest modificar: 
+public function authorize()
+    {
+        return true; //! C4 SI NO TE MARCA UN 404 ERROR
+    }
 
+    Ojo con RouteServiceProvider 
+    Public function map()
+
+{
+
+    $this->mapApiRoutes();
+
+    $this->mapWebRoutes();
+
+}

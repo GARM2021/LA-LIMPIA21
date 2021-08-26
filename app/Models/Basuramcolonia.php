@@ -12,11 +12,7 @@ class Basuramcolonia extends Model
     protected $table = 'basuramcolonia';// !C2
     protected $primaryKey = 'colonia';   // !C2
     protected $fillable = [
-
-
         'nomcol',
-        
-
     ];
 
 
