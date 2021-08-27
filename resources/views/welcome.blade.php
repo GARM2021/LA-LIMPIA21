@@ -25,9 +25,12 @@
             Limpia 21 
         </div>
         <div class="links">
-            <a href="/colonias">Catalogo - Colonias</a> {{-- C4 --}}
+            <a href="/colonias"> Colonias</a> {{-- C4 --}}
             <br>
-            <a href="/gestores">Catalogo - Gestores</a>
+            <a href="/gestores"> Gestores</a>
+            <br>
+            <a href="/giros"> Giros</a>
+
 
         </div>
     </body>

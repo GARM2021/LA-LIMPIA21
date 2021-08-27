@@ -41,6 +41,8 @@ Route::delete('/colonias/{colonia}/destroy',[BasuramcoloniaController::class,'de
 
 /////////////////////////////////////////////////////////////////////
 
+//Route::resource('gestores', 'BasuramgestorController'); 
+
 Route::get('gestores','BasuramgestorController@index')->name('gestores.index');//!C2 L17
 
 Route::post('gestores/store','BasuramgestorController@store')->name('gestores.store');//!C2 L17
@@ -54,3 +56,17 @@ Route::match(['put', 'patch'],'gestores/{gestor}/update','BasuramgestorControlle
 Route::get('/gestores/{gestor}/show','BasuramgestorController@show')->name('gestores.show');//!C2 L17
 
 Route::delete('/gestores/{gestor}/destroy','BasuramgestorController@destroy')->name('gestores.destroy'); 
+
+Route::get('giros','BasuramgiroController@index')->name('giros.index');//!C2 L17
+
+Route::post('giros/store','BasuramgiroController@store')->name('giros.store');//!C2 L17
+
+Route::get('giros/create','BasuramgiroController@create')->name('giros.create');//!C2 L17
+
+Route::get('giros/{giro}/edit','BasuramgiroController@edit')->name('giros.edit');//!C2 L17
+
+Route::match(['put', 'patch'],'giros/{giro}/update','BasuramgiroController@update')->name('giros.update');//!C2 L17
+
+Route::get('/giros/{giro}/show','BasuramgiroController@show')->name('giros.show');//!C2 L17
+
+Route::delete('/giros/{giro}/destroy','BasuramgiroController@destroy')->name('giros.destroy'); 

@@ -26,7 +26,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
-     protected $namespace = 'App\\Http\\Controllers'; //! c4 L14 IMPORTANTE
+     protected $namespace = 'App\\Http\\Controllers'; //! c4 L14 IMPORTANTE ESTABA COMENTADO
 
     /**
      * Define your route model bindings, pattern filters, etc.
