@@ -2,7 +2,7 @@
 @section('content')
     <h2>Show Gestor</h2>
     
-    <form method="GET" action="{{route('colonias.index', ['gestor' => $gestor->gestor] )}}">
+    <form method="GET" action="{{route('gestores.index', ['gestor' => $gestor->gestor] )}}">
       @csrf 
         <div class="form-row">
             <label>Gestor {{$gestor->gestor}}</label>

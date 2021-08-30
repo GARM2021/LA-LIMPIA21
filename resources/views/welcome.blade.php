@@ -30,6 +30,8 @@
             <a href="/gestores"> Gestores</a>
             <br>
             <a href="/giros"> Giros</a>
+            <br>
+            <a href="/subgiros"> Subgiros</a>
 
 
         </div>
