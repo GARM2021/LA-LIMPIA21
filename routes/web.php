@@ -63,4 +63,5 @@ Route::delete('gestores/{gestor}/destroy','BasuramgestorController@destroy')->na
 Route::resource('giros', 'BasuramgiroController');
 
 Route::resource('subgiros', 'BasuramsubgiroController');
+Route::resource('grupos', 'BasuramgruposController');
 

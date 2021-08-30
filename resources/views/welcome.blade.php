@@ -32,6 +32,8 @@
             <a href="/giros"> Giros</a>
             <br>
             <a href="/subgiros"> Subgiros</a>
+            <br>
+            <a href="/grupos"> Grupos </a>
 
 
         </div>
