@@ -64,4 +64,5 @@ Route::resource('giros', 'BasuramgiroController');
 
 Route::resource('subgiros', 'BasuramsubgiroController');
 Route::resource('grupos', 'BasuramgruposController');
+Route::resource('tipos', 'BasuramtiposController');
 
