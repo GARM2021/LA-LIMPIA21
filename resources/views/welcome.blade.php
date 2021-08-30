@@ -36,6 +36,8 @@
             <a href="/grupos"> Grupos </a>
             <br>
             <a href="/tipos"> Tipos </a>
+            <br>
+            <a href="/categos"> Categorias </a>
 
 
         </div>
