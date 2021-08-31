@@ -40,6 +40,8 @@
             <a href="/categos"> Categorias </a>
             <br>
             <a href="/recargos"> Recargos </a>
+            <br>
+            <a href="/tpocars"> Tipos de Cargos </a>
 
 
         </div>

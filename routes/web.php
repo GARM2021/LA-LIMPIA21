@@ -67,4 +67,5 @@ Route::resource('grupos', 'BasuramgruposController');
 Route::resource('tipos', 'BasuramtiposController');
 Route::resource('categos', 'BasuramcategosController');
 Route::resource('recargos', 'BasuramrecargosController');
+Route::resource('tpocars', 'BasuramtpocarController');
 
