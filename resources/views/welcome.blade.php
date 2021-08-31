@@ -38,6 +38,8 @@
             <a href="/tipos"> Tipos </a>
             <br>
             <a href="/categos"> Categorias </a>
+            <br>
+            <a href="/recargos"> Recargos </a>
 
 
         </div>

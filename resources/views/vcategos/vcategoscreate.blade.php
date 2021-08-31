@@ -9,7 +9,7 @@
             <label>Categoria</label>
             <input class="form-control" type="text" name="catego" value="{{ old('catego')}}" required>
    
-            <label>Descripcion/label>
+            <label>Descripcion</label>
             <input class="form-control" type="text" name="descripcion" value="{{ old('descripcion')}}" required>
             <label>Tarifa</label>
             <input class="form-control" type="number" name="tarifa" value="{{ old('tarifa')}}" required>
