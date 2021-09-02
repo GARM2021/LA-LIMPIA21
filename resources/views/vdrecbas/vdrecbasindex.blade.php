@@ -12,7 +12,7 @@
         <table class="table table-striped">
             <thead class="thead-light">
                 <tr>
-                    <th>Nombre Cuenta</th>
+                    <th>Cuenta</th>
                     <th>Giro</th>
                     <th>Subgiro</th>
                     <th>Nombre</th>
@@ -25,17 +25,19 @@
                     <th>Telpart</th>
                     <th>Telneg</th>
                     <th>ExpCat</th>
-                    <th>Cuenta Anterior</th>
+                    <th>Fecha de inicio</th>
+                   
                     <th>Numero de Permiso</th>
                     <th>Fecha Permiso</th>
                     <th>Fecha de Baja</th>
                     <th>Fecha Notificacion</th>
+                    <th>Cuenta Anterior</th>
                     <th>Gestor</th>
                     <th>Fecha Requisicion</th>
                     <th>Clave de Requisicion</th>
                     <th>Fecha de Embargo</th>
-                    <label>Grupo</th>
-                    <label>Tipo</th>
+                    <th>Grupo</th>
+                    <th>Tipo</th>
                     
                     
 
@@ -53,30 +55,36 @@
                         <td>{{ $cuenta1->nomciudad }}</td>      
                         <td>{{ $cuenta1->nomcomer }}</td>      
                         <td>{{ $cuenta1->ubicacion }}</td>     
-                        <td>{{ $cuenta1->colonia }}</td>      
+                        <td>{{ $cuenta1->colonia }}</td>  
+                        <td>{{ $cuenta1->rfc }}</td> 
+                        <td>{{ $cuenta1->telpart }}</td>      
+                        <td>{{ $cuenta1->telneg }}</td> 
+                        <td>{{ $cuenta1->expcat }}</td> 
                         <td>{{ $cuenta1->finicio }}</td>      
+                               
                         <td>{{ $cuenta1->numper }}</td>   
                         <td>{{ $cuenta1->fperm }}</td>   
                         <td>{{ $cuenta1->fbaja }}</td> 
-                        <td>{{ $cuenta1->fnotifica }}</td>      
-                        <td>{{ $cuenta1->gestor }}</td>      
-                        <td>{{ $cuenta1->expcat }}</td>      
-                        <td>{{ $cuenta1->ctaant }}</td>       
+                        <td>{{ $cuenta1->fnotifica }}</td> 
+                        <td>{{ $cuenta1->ctaant }}</td>     
+                        <td>{{ $cuenta1->gestor }}</td>         
+                       
+                          
+                             
                         <td>{{ $cuenta1->freq }}</td>                       
                         <td>{{ $cuenta1->cvereq }}</td>      
                         <td>{{ $cuenta1->fembargo }}</td>      
-                        <td>{{ $cuenta1->rfc }}</td>                       
-                        <td>{{ $cuenta1->telpart }}</td>      
-                        <td>{{ $cuenta1->telneg }}</td>      
+                                             
+                           
                         <td>{{ $cuenta1->grupo }}</td>       
-                        <td>{{ $cuenta1->cuenta }}</td>              
+                        <td>{{ $cuenta1->tipo }}</td>              
                     
 
                         <td>
                             <a class="btn btn-link"
-                                href="{{ route('cuentas.show', ['cuenta' => $cuenta1->cuenta]) }}">Show</a>
+                                href="{{ route('cuentas.show', ['cuenta' => $cuenta1->tid]) }}">Show</a>
                             <a class="btn btn-link"
-                                href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->cuenta]) }}"> Edit</a>
+                                href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->tid]) }}"> Edit</a>
 
                             <form method="POST" class="d-inline"
                                 action="{{ route('cuentas.destroy', ['cuenta' => $cuenta1->cuenta]) }}">

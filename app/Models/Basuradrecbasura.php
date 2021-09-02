@@ -38,6 +38,7 @@ class Basuradrecbasura extends Model
         'telneg',
         'grupo',
         'cuenta',
+        'tipo',
 
     ];
 }
