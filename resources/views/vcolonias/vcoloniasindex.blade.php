@@ -27,7 +27,9 @@
                                 href="{{ route('colonias.show', ['colonia' => $colonia1->colonia]) }}">Show</a>
                             <a class="btn btn-link"
                                 href="{{ route('colonias.edit', ['colonia' => $colonia1->colonia]) }}"> Edit</a>
-
+                            <a class="btn btn-link"
+                                href="{{ route('colonias.cuentascoloniasshow', ['colonia' => $colonia1->colonia]) }}"> Cuentas</a>
+   
                             <form method="POST" class="d-inline"
                                 action="{{ route('colonias.destroy', ['colonia' => $colonia1->colonia]) }}">
                                 @csrf

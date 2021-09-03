@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Basuramcolonia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -41,4 +42,6 @@ class Basuradrecbasura extends Model
         'tipo',
 
     ];
+
+    
 }

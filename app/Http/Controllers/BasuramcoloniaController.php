@@ -15,6 +15,16 @@ class BasuramcoloniaController extends Controller
     //      $colonias = DB::table('basuramcolonia')->get();
     //     return view('vcolonias', compact('colonias'));
     // }
+
+   //public function showcolonias(Basuramcolonia $colonia) //!C3 L17 L47
+   //{
+   //   $value =      Basuramcolonia::prueba(1);
+   //  dd($value);
+   //    return view('vcolonias.vcoloniasshow')->with([  //!C3 L33
+
+   //        'colonia' => $colonia,
+   //    ]);
+   //}
     public function index()
     {
         $colonias = Basuramcolonia::all();
@@ -63,6 +73,7 @@ class BasuramcoloniaController extends Controller
     }
     public function show(Basuramcolonia $colonia) //!C3 L17 L47
     {
+      
         return view('vcolonias.vcoloniasshow')->with([  //!C3 L33
 
             'colonia' => $colonia,
@@ -77,4 +88,18 @@ class BasuramcoloniaController extends Controller
         return $colonia;
         
     }
+
+    public function cuentascoloniasshow(Basuramcolonia $colonia) //!C3 L17 L47
+    {
+     
+       // $value =      Basuramcolonia::ColoniaCuentas_HM(1);
+       // dd($value);
+       
+       $coloniacuentas = Basuramcolonia::ColoniaCuentas_HM($colonia->colonia);
+       //dd($coloniacuentas);
+       return view('vdrecbas.vdrecbascoloniacuentashm', compact('coloniacuentas'));
+       
+    }
+
+    
 }

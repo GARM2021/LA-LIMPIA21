@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\BasuradrecbasuraRequest;
 use Illuminate\Support\Facades\DB;
 use App\Models\Basuradrecbasura;
-use PhpParser\Node\Stmt\Return_;
+use  PhpParser\Node\Stmt\Return_;
 
 class BasuradrecbasuraController extends Controller
 {
@@ -72,5 +72,6 @@ class BasuradrecbasuraController extends Controller
         return $cuenta;
         
     }
-    //
+
+     //
 }

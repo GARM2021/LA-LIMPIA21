@@ -70,4 +70,7 @@ Route::resource('recargos', 'BasuramrecargosController');
 Route::resource('tpocars', 'BasuramtpocarController');
 Route::resource('cuentas', 'BasuradrecbasuraController');
 
+Route::get('/colonias/{colonia}/cuentascoloniasshow','BasuramcoloniaController@cuentascoloniasshow')->name('colonias.cuentascoloniasshow');//!C2 L17
+
+
 

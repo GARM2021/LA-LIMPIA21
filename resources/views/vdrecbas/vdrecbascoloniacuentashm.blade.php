@@ -1,11 +1,13 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
-<h1>List of Cuentas</h1>
+@if (empty($coloniacuentas))
+    <div class="alert alert-warning">La lista de cuentas esta vacia</div> 
+
+<h1>List of Cuentas de la colonia {{$coloniacuentas[0]->colonia}}</h1>
 
 <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 
-@if (empty($cuentas))
-    <div class="alert alert-warning">La lista de cuentas esta vacia</div>
+
 
 @else
     <div class="table-responsive">
@@ -44,7 +46,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($cuentas as $cuenta1)
+                @foreach ($coloniacuentas as $cuenta1)
                     <tr>
                         
                         <td>{{ $cuenta1->cuenta }}</td>  
