@@ -2,14 +2,18 @@
 @section('content')
 @if (empty($coloniacuentas))
     <div class="alert alert-warning">La lista de cuentas esta vacia</div> 
+    @else
+<h1>List of Cuentas de la colonia:</h1>
+<h1>{{$coloniacuentas[0]->colonia}}</h1> 
+<h1>{{ $coloniacuentas[0]->BT_ColoniaCuentas->nomcol }}</h1>
 
-<h1>List of Cuentas de la colonia {{$coloniacuentas[0]->colonia}}</h1>
+
 
 <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 
 
 
-@else
+
     <div class="table-responsive">
         <table class="table table-striped">
             <thead class="thead-light">
@@ -79,8 +83,8 @@
                                              
                            
                         <td>{{ $cuenta1->grupo }}</td>       
-                        <td>{{ $cuenta1->tipo }}</td>              
-                    
+                        <td>{{ $cuenta1->tipo }}</td>  
+                                          
 
                         <td>
                             <a class="btn btn-link"

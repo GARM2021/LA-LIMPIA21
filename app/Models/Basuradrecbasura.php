@@ -43,5 +43,17 @@ class Basuradrecbasura extends Model
 
     ];
 
+
+
+    public  function BT_ColoniaCuentas()
+    {
+            {
+      // return $this->belongsTo('App\Models\Basuradrecbasura', 'colonia', 'colonia'); 
+       return $this->belongsTo('App\Models\Basuramcolonia', 'colonia', 'colonia'); 
+         }
+        # code...
+    }
+
+    
     
 }
