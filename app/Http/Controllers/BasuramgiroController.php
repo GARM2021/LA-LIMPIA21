@@ -21,12 +21,12 @@ class BasuramgiroController extends Controller
     }
 
     //public function getAllColoniasUsingModel() //!C2s
-    
-   // {
+
+    // {
     //    $giros = Basuramgiro::all();
 
-   //     return view('vgiros', compact('giros'));
-   // }
+    //     return view('vgiros', compact('giros'));
+    // }
 
     public function create() //!C2 L17
     {
@@ -70,11 +70,13 @@ class BasuramgiroController extends Controller
     public function destroy($giro) //!C3 L35
     {
         $giro = Basuramgiro::findOrFail($giro);
-
         $giro->delete();
-
         return $giro;
-        
     }
-    //
+
+    public function cuentasgirosshow(Basuramgiro $giro)
+    {
+        $girocuentas = Basuramgiro::GiroCuentas_HM($giro->giro);
+        return view('vgiros.vgirocuentashm', compact('girocuentas'));
+    }
 }

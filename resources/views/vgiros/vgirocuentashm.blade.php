@@ -1,13 +1,13 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
-    @if ($gestorcuentas->count() == 0)
-
-        <div class="alert alert-warning"> La lista de cuentas esta vacia </div>
+    @if ($girocuentas->count() == 0)
+  
+    <div class="alert alert-warning"> La lista de cuentas esta vacia </div>
 
     @else
-        <h1>List of Cuentas de la gestor:</h1>
-        <h1>{{ $gestorcuentas[0]->gestor }}</h1>
-        <h1>{{ $gestorcuentas[0]->BT_GestorCuentas->descripcion }}</h1>
+
+        <h1>List of Cuentas de la giro:</h1>
+        <h1>{{ $girocuentas[0]->BT_GiroCuentas->nomgiro }}</h1> --}}
 
         <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 
@@ -47,7 +47,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($gestorcuentas as $cuenta1)
+                    @foreach ($girocuentas as $cuenta1)
                         <tr>
 
                             <td>{{ $cuenta1->cuenta }}</td>
@@ -57,8 +57,8 @@
                             <td>{{ $cuenta1->direccion }}</td>
                             <td>{{ $cuenta1->nomciudad }}</td>
                             <td>{{ $cuenta1->nomcomer }}</td>
-                            <td>{{ $cuenta1->ubicacion }}</td>
-                            <td>{{ $cuenta1->gestor }}</td>
+                            <td>{{ $cuenta1->colonia }}</td>
+                            <td>{{ $cuenta1->giro }}</td>
                             <td>{{ $cuenta1->rfc }}</td>
                             <td>{{ $cuenta1->telpart }}</td>
                             <td>{{ $cuenta1->telneg }}</td>
@@ -102,6 +102,13 @@
                 </tbody>
             </table>
         </div>
+   
+
     @endif
 
 @endsection
+
+
+{{-- </body>
+
+</html> --}}

@@ -15,4 +15,15 @@ class Basuramgiro extends Model
         'causarec',
     ];
 
+    public function HM_GiroCuentas()
+    {
+        return $this->hasMany('App\Models\Basuradrecbasura', 'giro', 'giro');
+    }
+
+    public static function GiroCuentas_HM($giro)
+    {
+      
+        $girocuentas = Basuramgiro::find($giro)->HM_GiroCuentas;
+        return $girocuentas;
+    }
 }

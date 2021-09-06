@@ -47,22 +47,16 @@ class Basuradrecbasura extends Model
 
     public  function BT_ColoniaCuentas()
     {
-            {
-      // return $this->belongsTo('App\Models\Basuradrecbasura', 'colonia', 'colonia'); 
-       return $this->belongsTo('App\Models\Basuramcolonia', 'colonia', 'colonia'); 
-         }
-        # code...
+        return $this->belongsTo('App\Models\Basuramcolonia', 'colonia', 'colonia');
     }
 
     public  function BT_GestorCuentas()
     {
-            {
-      // return $this->belongsTo('App\Models\Basuradrecbasura', 'colonia', 'colonia'); 
-       return $this->belongsTo('App\Models\Basuramgestor', 'gestor', 'gestor'); 
-         }
-        # code...
+        return $this->belongsTo('App\Models\Basuramgestor', 'gestor', 'gestor');
     }
 
-    
-    
+    public function BT_GiroCuentas()
+    {
+        return $this->belongsTo('App\Models\Basuramgiro', 'giro', 'giro');
+    }
 }
