@@ -26,4 +26,15 @@ class Basuramgiro extends Model
         $girocuentas = Basuramgiro::find($giro)->HM_GiroCuentas;
         return $girocuentas;
     }
+
+    public function HM_GiroSubgiros()
+    {
+        return $this->hasMany('App\Models\Basuramsubgiro', 'giro', 'giro');# code...
+    }
+    
+    public static function GiroSubgiros_HM($giro)
+    {
+        $girosubgiros = Basuramgiro::find($giro)->HM_GiroSubgiros;
+        return $girosubgiros;
+    }
 }

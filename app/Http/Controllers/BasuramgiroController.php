@@ -79,4 +79,11 @@ class BasuramgiroController extends Controller
         $girocuentas = Basuramgiro::GiroCuentas_HM($giro->giro);
         return view('vgiros.vgirocuentashm', compact('girocuentas'));
     }
+
+    public function subgirosgirosshow(Basuramgiro $giro)
+    {
+        $girosubgiros = Basuramgiro::GiroSubgiros_HM($giro->giro);
+        
+        return view('vgiros.vgirossubgiroshm', compact('girosubgiros'));
+    }
 }

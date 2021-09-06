@@ -25,11 +25,13 @@
 
                             <td>
                                 <a class="btn btn-link" href="{{ route('giros.show', ['giro' => $giros1->giro]) }}">Show</a>
-                                <a class="btn btn-link" href="{{ route('giros.edit', ['giro' => $giros1->giro]) }}">
-                                    Edit</a>
+                                <a class="btn btn-link" href="{{ route('giros.edit', ['giro' => $giros1->giro]) }}">Edit</a>
                                 <a class="btn btn-link"
                                     href="{{ route('giros.cuentasgirosshow', ['giro' => $giros1->giro]) }}">
-                                    Cuentas</a>
+                                    Cuentas  </a>
+                                    <a class="btn btn-link"
+                                    href="{{ route('giros.subgirosgirosshow', ['giro' => $giros1->giro]) }}">
+                                    Subgiros</a>
 
                                 <form method="POST" class="d-inline"
                                     action="{{ route('giros.destroy', ['giro' => $giros1->giro]) }}">

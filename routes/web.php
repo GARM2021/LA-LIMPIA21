@@ -62,6 +62,7 @@ Route::delete('gestores/{gestor}/destroy','BasuramgestorController@destroy')->na
 
 Route::resource('giros', 'BasuramgiroController');
 
+//Route::resource('subgiros', 'BasuramsubgiroController');
 Route::resource('subgiros', 'BasuramsubgiroController');
 Route::resource('grupos', 'BasuramgruposController');
 Route::resource('tipos', 'BasuramtiposController');
@@ -73,6 +74,7 @@ Route::resource('cuentas', 'BasuradrecbasuraController');
 Route::get('/colonias/{colonia}/cuentascoloniasshow','BasuramcoloniaController@cuentascoloniasshow')->name('colonias.cuentascoloniasshow');//!C2 L17
 Route::get('/gestores/{gestor}/cuentasgestoresshow','BasuramgestorController@cuentasgestoresshow')->name('gestores.cuentasgestoresshow');//!C2 L17
 Route::get('/giros/{giro}/cuentasgirosshow','BasuramgiroController@cuentasgirosshow')->name('giros.cuentasgirosshow');//!C2 L17
+Route::get('/giros/{giro}/subgirosgirosshow','BasuramgiroController@subgirosgirosshow')->name('giros.subgirosgirosshow');//!C2 L17
 
 
 

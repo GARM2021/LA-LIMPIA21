@@ -7,7 +7,7 @@
     @else
 
         <h1>List of Cuentas de la giro:</h1>
-        <h1>{{ $girocuentas[0]->BT_GiroCuentas->nomgiro }}</h1> --}}
+        <h1>{{ $girocuentas[0]->BT_GiroCuentas->nomgiro }}</h1> 
 
         <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 

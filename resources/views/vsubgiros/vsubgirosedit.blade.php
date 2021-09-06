@@ -2,7 +2,7 @@
 @section('content')
     <h1>Edit a SubGiro</h1>
     
-    <form method="POST" action="{{route('giros.update', ['subgiro' => $subgiro->subgiro] )}}">
+    <form method="POST" action="{{route('subgiros.update', ['subgiro' => $subgiro->subgiro] )}}">
       @csrf 
         @method('PUT')
         <div class="form-row">

@@ -15,4 +15,9 @@ class Basuramsubgiro extends Model
         'nomsubgiro',
         'giro',
     ];
+
+    public function BT_GiroSubgiros()
+    {
+        return $this->belongsTo('App\Models\Basuramgiro', 'giro', 'giro');
+    }
 }
