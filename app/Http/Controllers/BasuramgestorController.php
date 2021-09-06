@@ -13,8 +13,8 @@ class BasuramgestorController extends Controller
 {
     //public function getAllColonia() //!C2 Usa query builder
     // {
-    //      $colonias = DB::table('basuramcolonia')->get();
-    //     return view('vcolonias', compact('colonias'));
+    //      $gestores = DB::table('basuramgestor')->get();
+    //     return view('vgestores', compact('gestores'));
     // }
     public function index()
     {
@@ -77,4 +77,14 @@ class BasuramgestorController extends Controller
 
         return $gestor;
     } 
+
+    public function cuentasgestoresshow(Basuramgestor $gestor) //!C3 L17 L47
+    {
+                  
+       $gestorcuentas = Basuramgestor::GestorCuentas_HM($gestor->gestor);
+       //dd($gestorcuentas);
+       return view('vgestores.vgestorcuentashm', compact('gestorcuentas'));
+       
+    }
+
 }

@@ -54,6 +54,15 @@ class Basuradrecbasura extends Model
         # code...
     }
 
+    public  function BT_GestorCuentas()
+    {
+            {
+      // return $this->belongsTo('App\Models\Basuradrecbasura', 'colonia', 'colonia'); 
+       return $this->belongsTo('App\Models\Basuramgestor', 'gestor', 'gestor'); 
+         }
+        # code...
+    }
+
     
     
 }

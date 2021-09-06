@@ -71,6 +71,7 @@ Route::resource('tpocars', 'BasuramtpocarController');
 Route::resource('cuentas', 'BasuradrecbasuraController');
 
 Route::get('/colonias/{colonia}/cuentascoloniasshow','BasuramcoloniaController@cuentascoloniasshow')->name('colonias.cuentascoloniasshow');//!C2 L17
+Route::get('/gestores/{gestor}/cuentasgestoresshow','BasuramgestorController@cuentasgestoresshow')->name('gestores.cuentasgestoresshow');//!C2 L17
 
 
 

@@ -1,11 +1,11 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
-<h1>List of colonias</h1>
+<h1>List of Colonias</h1>
 
 <a class="btn btn-success mb-3" href="{{ route('colonias.create') }}">Create</a>
 
 @if (empty($colonias))
-    <div class="alert alert-warning">La lista de coloniaos esta vacia</div>
+    <div class="alert alert-warning">La lista de colonias esta vacia</div>
 
 @else
     <div class="table-responsive">
