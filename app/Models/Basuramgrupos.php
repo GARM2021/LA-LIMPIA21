@@ -15,4 +15,16 @@ class Basuramgrupos extends Model
         'descripcion',
         'fundamento',
     ];
+
+    public function HM_GrupoCuentas()
+    {
+        return $this->hasMany('App\Models\Basuradrecbasura', 'grupo', 'grupo');# code...
+    }
+
+    public static function GrupoCuentas_HM($grupo)
+    {
+        $grupocuentas = Basuramgrupos::find($grupo)->HM_GrupoCuentas;
+        return $grupocuentas;
+        # code...
+    }
 }

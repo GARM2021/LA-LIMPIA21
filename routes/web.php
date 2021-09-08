@@ -76,6 +76,7 @@ Route::get('/gestores/{gestor}/cuentasgestoresshow','BasuramgestorController@cue
 Route::get('/giros/{giro}/cuentasgirosshow','BasuramgiroController@cuentasgirosshow')->name('giros.cuentasgirosshow');//!C2 L17
 Route::get('/giros/{giro}/subgirosgirosshow','BasuramgiroController@subgirosgirosshow')->name('giros.subgirosgirosshow');//!C2 L17
 Route::get('/subgiros/{subgiro}/cuentassubgirosshow','BasuramsubgiroController@cuentassubgirosshow')->name('subgiros.cuentassubgirosshow');//!C2 L17
+Route::get('/grupos/{grupo}/cuentasgruposshow','BasuramgruposController@cuentasgruposshow')->name('grupos.cuentasgruposshow');//!C2 L17
 
 
 

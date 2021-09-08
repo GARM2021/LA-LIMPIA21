@@ -72,4 +72,13 @@ class BasuramgruposController extends Controller
         return $grupo;
         
     }
+
+    public function cuentasgruposshow(Basuramgrupos $grupo)
+    {
+        
+        $grupocuentas = Basuramgrupos::GrupoCuentas_HM($grupo->grupo);
+        
+        return view('vgrupos.vgrupocuentashm', compact('grupocuentas'));
+        
+    }
 }
