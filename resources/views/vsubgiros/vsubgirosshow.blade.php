@@ -16,7 +16,7 @@
             {{-- <input class="form-control" type="text" name="nomcol" value="{{ old('nomcol') ?? $subgiro->nomcol}}" required> --}}
         </div>
         <div class="form-row"> 
-            <label>Giro/label>
+            <label>Giro</label>
             <br>
             <label>{{$subgiro->giro}}</label>
             {{-- <input class="form-control" type="text" name="nomcol" value="{{ old('nomcol') ?? $subgiro->nomcol}}" required> --}}

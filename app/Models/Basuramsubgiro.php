@@ -20,4 +20,16 @@ class Basuramsubgiro extends Model
     {
         return $this->belongsTo('App\Models\Basuramgiro', 'giro', 'giro');
     }
+
+    public function HM_SubgiroCuentas()
+    {
+        return $this->hasMany('App\Models\Basuradrecbasura', 'subgiro', 'subgiro');
+        
+    }
+
+    public static function SubgiroCuentas_HM($subgiro)
+    {
+        $subgirocuentas = Basuramsubgiro::find($subgiro)->HM_SubgiroCuentas;
+        return $subgirocuentas; # code...
+    }
 }

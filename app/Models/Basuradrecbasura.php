@@ -59,4 +59,8 @@ class Basuradrecbasura extends Model
     {
         return $this->belongsTo('App\Models\Basuramgiro', 'giro', 'giro');
     }
+    public function BT_SubgiroCuentas()
+    {
+        return $this->belongsTo('App\Models\Basuramsubgiro', 'subgiro','subgiro');
+    }
 }

@@ -36,6 +36,8 @@
                     <a class="btn btn-link" href="{{ route('subgiros.show', ['subgiro' => $subgiro1->subgiro]) }}">Show sub</a>
                     <a class="btn btn-link" href="{{ route('subgiros.edit', ['subgiro' => $subgiro1->subgiro]) }}">
                         Edit</a>
+                        <a class="btn btn-link" href="{{ route('subgiros.cuentassubgirosshow', ['subgiro' => $subgiro1->subgiro]) }}">
+                           Cuentas</a>
 
                     <form method="POST" class="d-inline" action="{{ route('subgiros.destroy', ['subgiro' => $subgiro1->subgiro]) }}">
                         @csrf

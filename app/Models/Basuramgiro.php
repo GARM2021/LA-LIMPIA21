@@ -37,4 +37,6 @@ class Basuramgiro extends Model
         $girosubgiros = Basuramgiro::find($giro)->HM_GiroSubgiros;
         return $girosubgiros;
     }
+    
+    
 }
