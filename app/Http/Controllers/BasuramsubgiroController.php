@@ -70,7 +70,12 @@ class BasuramsubgiroController extends Controller
         $subgiro->delete();
 
         return $subgiro;
-        
+    }
+
+    public function cuentassubgirosshow(Basuramsubgiro $subgiro)
+    {
+        $subgirocuentas = Basuramsubgiro::SubgiroCuentas_HM($subgiro->subgiro);
+        return view('vsubgiros.vsubgiroscuentashm', compact('subgirocuentas'));
     }
 
    
