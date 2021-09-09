@@ -68,4 +68,10 @@ class Basuradrecbasura extends Model
     {
         return $this->belongsTo('App\Models\Basuramgrupos', 'grupo', 'grupo');
     }
+    
+    public function BT_TipoCuentas()
+    {
+        
+        return $this->belongsTo('App\Models\Basuramtipos', 'tipo', 'tipo');
+    }
 }

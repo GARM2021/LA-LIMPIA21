@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\TiposRequest;
+use App\Models\Basuradrecbasura;
 use Illuminate\Support\Facades\DB;
 use App\Models\Basuramtipos;
 use PhpParser\Node\Stmt\Return_;
@@ -71,6 +72,15 @@ class BasuramtiposController extends Controller
 
         return $tipo;
         
+    }
+
+    public function cuentastiposshow(Basuramtipos $tipo)
+    {
+        
+        $tipocuentas = Basuramtipos::TipoCuentas_HM($tipo->tipo);
+        
+        return view('vtipos.vtipocuentashm', compact('tipocuentas'));
+
     }
     //
 }

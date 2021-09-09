@@ -77,6 +77,7 @@ Route::get('/giros/{giro}/cuentasgirosshow','BasuramgiroController@cuentasgiross
 Route::get('/giros/{giro}/subgirosgirosshow','BasuramgiroController@subgirosgirosshow')->name('giros.subgirosgirosshow');//!C2 L17
 Route::get('/subgiros/{subgiro}/cuentassubgirosshow','BasuramsubgiroController@cuentassubgirosshow')->name('subgiros.cuentassubgirosshow');//!C2 L17
 Route::get('/grupos/{grupo}/cuentasgruposshow','BasuramgruposController@cuentasgruposshow')->name('grupos.cuentasgruposshow');//!C2 L17
+Route::get('/tipos/{tipo}/cuentastipossshow','BasuramtiposController@cuentastiposshow')->name('tipos.cuentastiposshow');//!C2 L17
 
 
 
