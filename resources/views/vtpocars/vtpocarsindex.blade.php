@@ -10,7 +10,7 @@
 @else
     <div class="table-responsive">
         <table class="table table-striped">
-            <thead class="thead-light">
+            <thead class="thead-dark">
                 <tr>
                     <th>Tipos de Cargo</th>
                     <th>Nombre Tipos de Cargo</th>

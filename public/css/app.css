@@ -171,9 +171,9 @@ sup {
 }
 
 a {
-    color: #3490dc;
+    color: #cbdc34;
     text-decoration: none;
-    background-color: transparent;
+    background-color: #6c757d;
 }
 
 a:hover {
@@ -1936,7 +1936,7 @@ pre code {
     font-weight: 400;
     line-height: 1.6;
     color: #495057;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -3097,8 +3097,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-link {
-    font-weight: 400;
-    color: #3490dc;
+    font-weight: 1000;
+    color: #083357;
     text-decoration: none;
 }
 

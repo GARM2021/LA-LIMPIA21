@@ -1,6 +1,6 @@
 <div class="table-responsive">
     <table class="table table-striped">
-        <thead class="thead-light">
+        <thead class="thead-dark">
             <tr>
                 <th>Cuenta</th>
                 <th>Giro</th>
