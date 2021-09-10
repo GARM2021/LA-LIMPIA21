@@ -76,9 +76,9 @@ class BasuramgruposController extends Controller
     public function cuentasgruposshow(Basuramgrupos $grupo)
     {
         
-        $grupocuentas = Basuramgrupos::GrupoCuentas_HM($grupo->grupo);
+        $tipocuentas = Basuramgrupos::GrupoCuentas_HM($grupo->grupo);
         
-        return view('vgrupos.vgrupocuentashm', compact('grupocuentas'));
+        return view('vgrupos.vgrupocuentashm', compact('tipocuentas'));
         
     }
 }

@@ -81,9 +81,9 @@ class BasuramgestorController extends Controller
     public function cuentasgestoresshow(Basuramgestor $gestor) //!C3 L17 L47
     {
                   
-       $gestorcuentas = Basuramgestor::GestorCuentas_HM($gestor->gestor);
+       $tipocuentas = Basuramgestor::GestorCuentas_HM($gestor->gestor);
        //dd($gestorcuentas);
-       return view('vgestores.vgestorcuentashm', compact('gestorcuentas'));
+       return view('vgestores.vgestorcuentashm', compact('tipocuentas'));
        
     }
 

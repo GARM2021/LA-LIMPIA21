@@ -91,8 +91,11 @@ class BasuramcoloniaController extends Controller
 
     public function cuentascoloniasshow(Basuramcolonia $colonia) //!C3 L17 L47
     {
-           $coloniacuentas = Basuramcolonia::ColoniaCuentas_HM($colonia->colonia);
-       return view('vdrecbas.vdrecbascoloniacuentashm', compact('coloniacuentas'));
+      //     $coloniacuentas = Basuramcolonia::ColoniaCuentas_HM($colonia->colonia);
+      // return view('vdrecbas.vdrecbascoloniacuentashm', compact('coloniacuentas'));
+//
+       $tipocuentas = Basuramcolonia::ColoniaCuentas_HM($colonia->colonia);
+       return view('vdrecbas.vdrecbascoloniacuentashm', compact('tipocuentas'));
        
     }
 
