@@ -107,3 +107,11 @@ public function authorize()
     $this->mapWebRoutes();
 
 }
+
+--------------------------------------------------------------------------------------------
+C 10
+20210909
+npm install
+npm run dev 
+
+

@@ -16,4 +16,9 @@ class Basuramcategos extends Model
         'kilos',
     ];
 
+    public function HM_CategoCuentas()
+    {
+        //return $this->hasMany('App\Models\Basuradrecbasura', 'Categoria', '')
+    }
+
 }
