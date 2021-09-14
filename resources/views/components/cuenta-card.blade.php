@@ -72,16 +72,16 @@
 
 
                     <td>
-                        <a class="btn btn-link"
+                        <a class="btn btn-success mb-3"
                             href="{{ route('cuentas.show', ['cuenta' => $cuenta1->tid]) }}">Show</a>
-                        <a class="btn btn-link" href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->tid]) }}">
+                            <a class="btn btn-success mb-3" href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->tid]) }}">
                             Edit</a>
 
                         <form method="POST" class="d-inline"
                             action="{{ route('cuentas.destroy', ['cuenta' => $cuenta1->cuenta]) }}">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-link">Delete</button>
+                            <button type="submit" class="btn btn-success mb-3" >Delete</button>
                         </form>
                     </td>
                 </tr>

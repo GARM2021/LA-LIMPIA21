@@ -1,4 +1,8 @@
-@extends('layouts.master') {{-- C2 L30 --}}
+@extends('layouts.master') 
+@section('css')
+<LInk rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <LINk rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css">
+@endsection{{-- C2 L30 --}}
 @section('content')
     @if ($tipocuentas->count() == 0)
   

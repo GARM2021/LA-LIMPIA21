@@ -12,8 +12,8 @@ class BasuradrecbasuraController extends Controller
 {
     public function index()
     {
-        $cuentas = Basuradrecbasura::all();
-        return view('vdrecbas.vdrecbasindex', compact('cuentas'));
+        $tipocuentas = Basuradrecbasura::all();
+        return view('vdrecbas.vdrecbasindex', compact('tipocuentas'));
     }
 
     //public function getAllColoniasUsingModel() //!C2s

@@ -113,5 +113,15 @@ C 10
 20210909
 npm install
 npm run dev 
+--------------------------------------------------------------------------------------------
+C 13.1 DT Colonias
+Me marcaba error 
+app.js:10601 jQuery.Deferred exception: Cannot read properties of undefined (reading 'mData') TypeError: Cannot read properties of undefined (reading 'mData')
+
+la solucion aqui:
+https://es.stackoverflow.com/questions/127460/datatable-error-cannot-read-property-mdata-of-undefined/127474
+
+Me faltaba declarar en la tabla de cuenta-card.blade.php un th para la columna de los botones
+
 
 

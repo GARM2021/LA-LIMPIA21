@@ -9,7 +9,7 @@
    
 <script src="{{ asset('js/app.js') }}" ></script>
  
-    @yield('css');  
+    @yield('css')  
    
  
 
@@ -20,11 +20,11 @@
  <!-- Styles -->
 <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
- <!--<style>
+ <style>
     body {
       background-color: rgb(197, 225, 235);
     }
-    </style> -->
+    </style>
      <title>Limpia 2222221</title>
 </head>
 
