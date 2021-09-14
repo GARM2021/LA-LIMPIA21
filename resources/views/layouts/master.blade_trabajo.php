@@ -7,24 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
    
-<script src="{{ asset('js/app.js') }}" ></script>
- 
-    @yield('css');  
-   
- 
+ <!-- <LInk href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <LINk href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css">      
+   --> 
+   <script src="{{ asset('js/app.js') }}" defer></script>
 
- <!-- Fonts -->
- <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">
- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">-->
+    @yield('css');
+   <!-- Scripts -->
+ <link rel="dns-prefetch" href="//fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
- <!-- Styles -->
-<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
- <!--<style>
+ <style>
     body {
       background-color: rgb(197, 225, 235);
     }
-    </style> -->
+    </style>
      <title>Limpia 2222221</title>
 </head>
 
@@ -38,5 +36,7 @@
     @yield('content')
    
 </body>
+
+@yield('js')
 
 </html>
