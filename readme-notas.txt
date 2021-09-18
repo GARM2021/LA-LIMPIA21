@@ -122,6 +122,11 @@ la solucion aqui:
 https://es.stackoverflow.com/questions/127460/datatable-error-cannot-read-property-mdata-of-undefined/127474
 
 Me faltaba declarar en la tabla de cuenta-card.blade.php un th para la columna de los botones
+---------------------------------------------------------------------------------------------
+Activar bootstrap en vcoloniasindex.blade.php
+1.- inclui en vcoloniasindex.blade.php el @section('css') 
+2.- Copy a public\css\app.css desde el de Laravel-Desde-0
+----------------------------------------------------------------------------------------------
 
 
 
