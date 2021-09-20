@@ -1,4 +1,14 @@
-@extends('layouts.master') {{-- C2 L30 --}}
+@extends('layouts.master') 
+@section('css') {{-- C 13.3  --}}
+<script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@endsection{{-- C2 L30 --}}
 @section('content')
     <h1>List of Tipos</h1>
 
