@@ -11,13 +11,13 @@
 @endsection
 @section('content')
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-striped ">
             <thead class="thead-dark">
                 <tr>
                     <th>Opcion</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="flex item-center">
                 <tr>
                   <td>  <a class="btn btn-link" href="/colonias"> Colonias</a> </td>{{-- C4 --}}
                     
