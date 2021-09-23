@@ -127,6 +127,18 @@ Activar bootstrap en vcoloniasindex.blade.php  ok C 14.3
 1.- inclui en vcoloniasindex.blade.php el @section('css') 
 2.- Copy a public\css\app.css desde el de Laravel-Desde-0
 ----------------------------------------------------------------------------------------------
+Para el modal en tipos  se incluyo un boton   ok C 15.1 15.2
+ 
+ ver ejemplomodal.blade.php
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 

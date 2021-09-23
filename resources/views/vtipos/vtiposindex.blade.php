@@ -42,8 +42,8 @@
                                 <a class="btn btn-link"
                                     href="{{ route('tipos.show', ['tipo' => $tipos1->tipo]) }}">Show</a>
                                
-                                <a  class="btn btn-link" href="#" data-toggle="modal" data-idUpdate="'$tipos1->tipo'" data-target="#exampleModal">
-                                    <i class="fa fa-edit" style="color:aqua;font-size:16px;"></i>{{ __('ModalEdit') }}
+                                <a  class="btn btn-link"  data-toggle="modal" data-idUpdate="'$tipos1->tipo'" data-target="#exampleModal">
+                                    <i class="fa fa-edit" style="color:rgb(251, 255, 0);font-size:16px;"></i>{{ __('ModalEdit') }}
                                 </a>
 
                                 <a class="btn btn-link"
@@ -78,7 +78,7 @@
                     <span aria-hidden="true"> <i class="fa fa-close"></i></span>
                 </button>
             </div>
-            <form action="{{ route('tipos.edit', ['tipo' => $tipos1->tipo]) }}" method="post">
+            <form action="{{ route('tipos.update', ['tipo' => $tipos1->tipo]) }}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="form group row">
                         <label>Nombre Tipo</label>
-                        <input class="form-control" type="text" name="tipo" value="{{ old('tipo') ?? $tipos1->tipo }}"
+                        <input class="form-control" type="text" name="descripcion" value="{{ old('descripcion') ?? $tipos1->descripcion }}"
                             required>
                     </div>
                     <div class="form-row">
@@ -106,7 +106,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" id="name" class="btn btn-success waves-light"><i class="icofont icofont-check-circled"></i></button>
                 </div>
             </form>
         </div>
