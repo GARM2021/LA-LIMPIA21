@@ -51,3 +51,14 @@
 
 @endsection
 
+
+<script>
+    function myFunction(element) {
+       var _this = $(this).parent('tr');
+       $('#e_descripcion').val(element.parentElement.parentElement.getAttribute("trtipo"));
+       $('#e_fecven').val(_this.find('.fecven').text());
+       $('#e_doctot').val(_this.find('.doctot').text());
+
+   }
+</script>
+

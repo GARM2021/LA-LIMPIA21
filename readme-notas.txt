@@ -132,7 +132,21 @@ Para el modal en tipos  se incluyo un boton   ok C 15.1 15.2
  ver ejemplomodal.blade.php
 
 ----------------------------------------------------------------------------------------------
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
 
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+
+table {
+  background-color: #ff33cc;
+}
 
 
 
