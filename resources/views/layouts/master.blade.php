@@ -8,30 +8,33 @@
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-   
+
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
         function myFunction(element) {
-           
-           $('#e_tipo').val(element.parentElement.parentElement.getAttribute("trtipo"));
-           $('#e_descripcion').val(element.parentElement.parentElement.getAttribute("trdescripcion"));
-           $('#e_fecven').val(element.parentElement.parentElement.getAttribute("trfecven"));
-           $('#e_doctot').val(element.parentElement.parentElement.getAttribute("trdoctot"));
-           
-           
-          
-           var tipo = $("#e_tipo").val();          
-           $X = `/tipos/${tipo}`;
-           
-           document.getElementById("myFormId").action = $X;
-       }
 
-       function getAction() {
-        $tipo = 2;
-       // document.getElementById("myFormId").action = $tipo;
-           
-       }
-   </script>
+            //  myFunction(element)
+            //  se activa en el evento onclick de la TABLA  que muestra los elementos 
+
+            // Puebla los datos de los campos del MODAL 
+            $('#e_tipo').val(element.parentElement.parentElement.getAttribute("trtipo"));
+            $('#e_descripcion').val(element.parentElement.parentElement.getAttribute("trdescripcion"));
+            $('#e_fecven').val(element.parentElement.parentElement.getAttribute("trfecven"));
+            $('#e_doctot').val(element.parentElement.parentElement.getAttribute("trdoctot"));
+
+            // Con el valor de la llave ya resuelto lo guarda en una variable de paso 
+            var tipo = $("#e_tipo").val();
+
+            // Concatena la varaiable  de paso con el string de la ruta ojo con el caracter ` 
+           // que resuelve la variable de paso en la sentencia siguiente
+
+        $X = `/tipos/${tipo}`;
+
+            // Asigna la variable con el valor de la ruta a la propiedad .action 
+            // del MODAL  para cuando con el submit ya esta definida
+            document.getElementById("myFormId").action = $X;
+        }
+    </script>
 
 
 
@@ -64,7 +67,7 @@
 
     @yield('content')
 
-   
+
 </body>
 
 </html>
