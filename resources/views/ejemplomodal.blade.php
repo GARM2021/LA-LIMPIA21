@@ -1,11 +1,14 @@
-<!-- Button trigger modal -->
-<a  class="btn btn-link"  data-toggle="modal" data-idUpdate="'$tipos1->tipo'" data-target="#exampleModal">
-    <i class="fa fa-edit" style="color:rgb(251, 255, 0);font-size:16px;"></i>{{ __('ModalEdit') }}
-</a>
+<td>
+    <a class="btn btn-link" data-toggle="modal" data-idUpdate={{ $tipos1->tipo }} data-target="#exampleModal"
+        onclick='myFunction(this)'>
+        <i class="fa fa-edit" style="color:rgb(251, 255, 0);font-size:16px;"></i>{{ __('ModalEdit') }}
+    </a>
+  
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-write">
@@ -14,51 +17,48 @@
                     <span aria-hidden="true"> <i class="fa fa-close"></i></span>
                 </button>
             </div>
-            <form action="{{ route('tipos.update', ['tipo' => $tipos1->tipo]) }}" method="post">
+            <form id="myFormId" action="" method="post">
+                {{-- {{ route('tipos.update', ['tipo' => $tipos1->tipo]) }} --}}
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
-                  
+
                     <div class="form-row">
-                        <label>Tipo {{ $tipos1->tipo }}</label>
-                        {{-- <input class="form-control" type="text" name="tipo"  value="{{ old('tipo') ?? $tipo->tipo}}" > --}}
+                        {{-- <label id="e_tipo"></label> --}}
+
+                        <label>Tipo </label> >
+                        <input id="e_tipo" class="form-control" type="text" name="tipo" value="">
+                        {{--  --}}
+
+
+
                     </div>
                     <div class="form group row">
                         <label>Nombre Tipo</label>
-                        <input class="form-control" type="text" name="descripcion" value="{{ old('descripcion') ?? $tipos1->descripcion }}"
-                            required>
+                        <input id="e_descripcion" class="form-control" type="text" name="descripcion" value="">
                     </div>
                     <div class="form-row">
                         <label>Fecha de Vencimiento</label>
-                        <input class="form-control" type="text" name="fecven"
-                            value="{{ old('fecven') ?? $tipos1->fecven }}" required>
+                        <input id="e_fecven" class="form-control" type="text" name="fecven" value="">
                     </div>
                     <div class="form-row">
                         <label>Documentos Totales</label>
-                        <input class="form-control" type="text" name="doctot"
-                            value="{{ old('doctot') ?? $tipos1->doctot }}" required>
+                        <input id="e_doctot" class="form-control" type="text" name="doctot" value="">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="name" class="btn btn-success waves-light"><i class="icofont icofont-check-circled"></i></button>
+                    <button type="submit" id="name" class="btn btn-success waves-light"><i
+                            class="icofont icofont-check-circled"></i></button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+
+
+
+
 @endsection
-
-
-<script>
-    function myFunction(element) {
-       var _this = $(this).parent('tr');
-       $('#e_descripcion').val(element.parentElement.parentElement.getAttribute("trtipo"));
-       $('#e_fecven').val(_this.find('.fecven').text());
-       $('#e_doctot').val(_this.find('.doctot').text());
-
-   }
-</script>
-
