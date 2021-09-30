@@ -148,6 +148,14 @@ table {
   background-color: #ff33cc;
 }
 
+Very easy solution with jQuery:
+
+$('#myFormId').attr('action', 'myNewActionTarget.html');
+Your form:
+
+<form action=get_action() id="myFormId">
+...
+</form>
 
 
 

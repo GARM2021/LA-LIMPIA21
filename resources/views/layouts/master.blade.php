@@ -13,13 +13,26 @@
     <script>
         function myFunction(element) {
            
-           $('#e_tipo').val(element.parentElement.parentElement.parentElement.getAttribute("trtipo"));
+           $('#e_tipo').val(element.parentElement.parentElement.getAttribute("trtipo"));
            $('#e_descripcion').val(element.parentElement.parentElement.getAttribute("trdescripcion"));
            $('#e_fecven').val(element.parentElement.parentElement.getAttribute("trfecven"));
            $('#e_doctot').val(element.parentElement.parentElement.getAttribute("trdoctot"));
-   
+           
+           
+          
+           var tipo = $("#e_tipo").val();          
+           $X = `/tipos/${tipo}`;
+           
+           document.getElementById("myFormId").action = $X;
+       }
+
+       function getAction() {
+        $tipo = 2;
+       // document.getElementById("myFormId").action = $tipo;
+           
        }
    </script>
+
 
 
     @yield('css')

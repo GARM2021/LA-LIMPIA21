@@ -86,15 +86,21 @@
                         <span aria-hidden="true"> <i class="fa fa-close"></i></span>
                     </button>
                 </div>
-                <form action="{{ route('tipos.update', ['tipo' => $tipos1->tipo]) }}" method="post">
+                <form id="myFormId" action="" method="post">
+           {{-- {{ route('tipos.update', ['tipo' => $tipos1->tipo]) }} --}}
                     @csrf
                     @method('PUT')
                     <div class="modal-body">
 
                         <div class="form-row">
-                            {{-- <input class="form-control" type="text" name="tipo"  value="{{ old('tipo') ?? $tipo->tipo}}" > --}}
-                            <label>Tipo </label>
-                            <label id="e_tipo"></label>
+                            {{--   <label id="e_tipo"></label>  --}}
+
+                            <label>Tipo </label> >
+                           <input id="e_tipo" class="form-control" type="text" name="tipo"  value="" > 
+                            {{-- --}}
+                            
+
+                            
                         </div>
                         <div class="form group row">
                             <label>Nombre Tipo</label>
@@ -113,7 +119,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" id="name" class="btn btn-success waves-light"><i
-                                class="icofont icofont-check-circled"></i></button>
+                                class="icofont icofont-check-circled" ></i></button>
                     </div>
                 </form>
             </div>
