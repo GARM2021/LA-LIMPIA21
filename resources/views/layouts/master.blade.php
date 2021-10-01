@@ -26,7 +26,7 @@
             var tipo = $("#e_tipo").val();
 
             // Concatena la varaiable  de paso con el string de la ruta ojo con el caracter ` 
-           // que resuelve la variable de paso en la sentencia siguiente
+        // que resuelve la variable de paso en la sentencia siguiente
 
         $X = `/tipos/${tipo}`;
 
@@ -50,8 +50,47 @@
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(197, 225, 235);
+        }
+
+        /* Style the side navigation */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+        }
+
+
+        /* Side navigation links */
+        .sidenav a {
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color on hover */
+        .sidenav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style the content */
+        .content {
+            margin-left: 200px;
+            padding-left: 20px;
         }
 
     </style>
@@ -59,11 +98,22 @@
 </head>
 
 <body>
-    <h1>L I M P I A 21</h1>
-    <div class="links">
-        <a href="/">Menu Principal</a> {{-- C4 --}}
 
+    <div class="sidenav">
+        <a href="">L I M P I A 21</a>
+       
+        <a class="btn btn-link" href="/colonias"> Colonias</a> {-- C4 --}}
+        <a class="btn btn-link" href="/gestores"> Gestores</a>
+        <a class="btn btn-link" href="/giros"> Giros</a>
+        <a class="btn btn-link" href="/subgiros"> Subgiros</a>
+        <a class="btn btn-link" href="/grupos"> Grupos </a>
+        <a class="btn btn-link" href="/tipos"> Tipos </a>
+        <a class="btn btn-link" href="/categos"> Categorias </a>
+        <a class="btn btn-link" href="/recargos"> Recargos </a>
+        <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a>
+        <a class="btn btn-link" href="/cuentas"> Cuentas </a>
     </div>
+    
 
     @yield('content')
 

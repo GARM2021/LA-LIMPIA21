@@ -2,6 +2,7 @@
     <table class="table table-striped" id="tcuentas" style="width:100%">
         <thead class="thead-dark">
             <tr>
+                <th> </th>
                 <th>Cuenta</th>
                 <th>Giro</th>
                 <th>Subgiro</th>
@@ -37,7 +38,20 @@
         <tbody>
             @foreach ($tipocuentas as $cuenta1)
                 <tr>
+                    <td>
+                        <a class="btn btn-success mb-3"
+                            href="{{ route('cuentas.show', ['cuenta' => $cuenta1->tid]) }}">Show</a>
+                        <a class="btn btn-success mb-3"
+                            href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->tid]) }}">
+                            Edit</a>
 
+                        <form method="POST" class="d-inline"
+                            action="{{ route('cuentas.destroy', ['cuenta' => $cuenta1->cuenta]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-success mb-3">Delete</button>
+                        </form>
+                    </td>
                     <td>{{ $cuenta1->cuenta }}</td>
                     <td>{{ $cuenta1->giro }}</td>
                     <td>{{ $cuenta1->subgiro }}</td>
@@ -71,19 +85,7 @@
                     <td>{{ $cuenta1->tipo }}</td>
 
 
-                    <td>
-                        <a class="btn btn-success mb-3"
-                            href="{{ route('cuentas.show', ['cuenta' => $cuenta1->tid]) }}">Show</a>
-                            <a class="btn btn-success mb-3" href="{{ route('cuentas.edit', ['cuenta' => $cuenta1->tid]) }}">
-                            Edit</a>
 
-                        <form method="POST" class="d-inline"
-                            action="{{ route('cuentas.destroy', ['cuenta' => $cuenta1->cuenta]) }}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-success mb-3" >Delete</button>
-                        </form>
-                    </td>
                 </tr>
             @endforeach
 

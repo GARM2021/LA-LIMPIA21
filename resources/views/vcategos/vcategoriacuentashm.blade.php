@@ -1,20 +1,21 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
-    @if ($tipocuentas->count() == 0)
-  
-    <div class="alert alert-warning"> La lista de cuentas esta vacia </div>
+    <div class="content">
+        @if ($tipocuentas->count() == 0)
 
-    @else
+            <div class="alert alert-warning"> La lista de cuentas esta vacia </div>
 
-        <h1>List of Cuentas del Grupo:</h1>
-        <h1>{{ $tipocuentas[0]->BT_TipoCuentas->descripcion }}</h1> 
+        @else
 
-        <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
+            <h1>List of Cuentas del Grupo:</h1>
+            <h1>{{ $tipocuentas[0]->BT_TipoCuentas->descripcion }}</h1>
 
-        @include('components.cuenta-card');
+            <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 
-    @endif
+            @include('components.cuenta-card');
 
+        @endif
+    </div>
 @endsection
 
 

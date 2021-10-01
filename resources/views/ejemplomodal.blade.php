@@ -50,7 +50,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" id="name" class="btn btn-success waves-light"><i
-                            class="icofont icofont-check-circled"></i></button>
+                            class="icofont icofont-check-circled">Actualiza</i></button>
                 </div>
             </form>
         </div>

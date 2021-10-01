@@ -1,5 +1,6 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
+<div class="content">
     <h2>Show Tipo de Cargo</h2>
 
     <form method="GET" action="{{ route('tpocars.index', ['tpocar' => $tpocar->tpocar]) }}">
@@ -20,4 +21,5 @@
             <button type="submit" class="btn btn-primary btn-lg">Indice de Tipos</button>
         </div>
     </form>
+</div>
 @endsection

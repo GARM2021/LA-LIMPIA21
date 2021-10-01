@@ -4,6 +4,8 @@
     <LINk rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css">
 @endsection {{-- C2 L30 --}}
 @section('content')
+
+<div class="content">
 <h1>List of Cuentas</h1>
 
 <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
@@ -14,7 +16,7 @@
 @else
 @include('components.cuenta-card');
 @endif
-
+</div>
 @endsection
 
 

@@ -1,5 +1,6 @@
 @extends('layouts.master') {{-- C2  --}}
 @section('content')
+<div class="content">
 <h1>Create Colonia 20210825 15:16</h1>
     
     <form method="POST" action="{{route('colonias.store')}}">
@@ -17,4 +18,5 @@
         </div>
         
     </form>
+</div>
     @endsection

@@ -1,5 +1,6 @@
 @extends('layouts.master') {{-- C2  --}}
 @section('content')
+<div class="content">
 <h1>Create SubGiros </h1>
     
     <form method="POST" action="{{route('subgiros.store')}}">
@@ -19,4 +20,5 @@
         </div>
         
     </form>
+</div>
     @endsection

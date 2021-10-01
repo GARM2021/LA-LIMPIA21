@@ -12,67 +12,68 @@
 
 
 @section('content')
-    <h1>List of Tipos</h1>
+    <div class="content">
+        <h1>List of Tipos</h1>
 
-    <a class="btn btn-success mb-3" href="{{ route('tipos.create') }}">Create</a>
+        <a class="btn btn-success mb-3" href="{{ route('tipos.create') }}">Create</a>
 
-    @if (empty($tipos))
-        <div class="alert alert-warning">La lista de tipos esta vacia</div>
+        @if (empty($tipos))
+            <div class="alert alert-warning">La lista de tipos esta vacia</div>
 
-    @else
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Tipos</th>
-                        <th>Nombre Tipos</th>
-                        <th>Fecha vencimiento</th>
-                        <th>Doc totales</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($tipos as $tipos1)
-                        <tr trtipo="{{ $tipos1->tipo }}" trdescripcion="{{ $tipos1->descripcion }}"
-                            trfecven="{{ $tipos1->fecven }}" trdoctot="{{ $tipos1->doctot }}">
-                                
-                            <td>{{$tipos1->tipo }}</td>
-                            <td>{{ $tipos1->descripcion }}</td>
-                            <td>{{ $tipos1->fecven }}</td>
-                            <td>{{ $tipos1->doctot }}</td>
+        @else
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tipos</th>
+                            <th>Nombre Tipos</th>
+                            <th>Fecha vencimiento</th>
+                            <th>Doc totales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($tipos as $tipos1)
+                            <tr trtipo="{{ $tipos1->tipo }}" trdescripcion="{{ $tipos1->descripcion }}"
+                                trfecven="{{ $tipos1->fecven }}" trdoctot="{{ $tipos1->doctot }}">
 
-                            <td>
-                                <a class="btn btn-link" data-toggle="modal" data-idUpdate={{ $tipos1->tipo }}
-                                    data-target="#exampleModal" onclick='myFunction(this)'>
-                                    <i class="fa fa-edit"
-                                        style="color:rgb(251, 255, 0);font-size:16px;"></i>{{ __('ModalEdit') }}
-                                </a>
-                                <a class="btn btn-link"
-                                    href="{{ route('tipos.show', ['tipo' => $tipos1->tipo]) }}">Show</a>
+                                <td>{{ $tipos1->tipo }}</td>
+                                <td>{{ $tipos1->descripcion }}</td>
+                                <td>{{ $tipos1->fecven }}</td>
+                                <td>{{ $tipos1->doctot }}</td>
 
-                                <a class="btn btn-link"
-                                    href="{{ route('tipos.cuentastiposshow', ['tipo' => $tipos1->tipo]) }}">
-                                    Cuentas</a>
+                                <td>
+                                    <a class="btn btn-link" data-toggle="modal" data-idUpdate={{ $tipos1->tipo }}
+                                        data-target="#exampleModal" onclick='myFunction(this)'>
+                                        <i class="fa fa-edit"
+                                            style="color:rgb(251, 255, 0);font-size:16px;"></i>{{ __('ModalEdit') }}
+                                    </a>
+                                    <a class="btn btn-link"
+                                        href="{{ route('tipos.show', ['tipo' => $tipos1->tipo]) }}">Show</a>
+
+                                    <a class="btn btn-link"
+                                        href="{{ route('tipos.cuentastiposshow', ['tipo' => $tipos1->tipo]) }}">
+                                        Cuentas</a>
 
 
-                                {{-- <a class="btn btn-link"
+                                    {{-- <a class="btn btn-link"
                                     href="{{ route('tipos.edit', ['tipo' => $tipos1->tipo]) }}">Edit</a> --}}
 
 
-                                <form method="POST" class="d-inline"
-                                    action="{{ route('tipos.destroy', ['tipo' => $tipos1->tipo]) }}">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-link">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
+                                    <form method="POST" class="d-inline"
+                                        action="{{ route('tipos.destroy', ['tipo' => $tipos1->tipo]) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-link">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
 
-                </tbody>
-            </table>
-        </div>
-    @endif
-
+                    </tbody>
+                </table>
+            </div>
+        @endif
+    </div>
 
 
 
@@ -87,20 +88,20 @@
                     </button>
                 </div>
                 <form id="myFormId" action="" method="post">
-           {{-- {{ route('tipos.update', ['tipo' => $tipos1->tipo]) }} --}}
+                    {{-- {{ route('tipos.update', ['tipo' => $tipos1->tipo]) }} --}}
                     @csrf
                     @method('PUT')
                     <div class="modal-body">
 
                         <div class="form-row">
-                            {{--   <label id="e_tipo"></label>  --}}
+                            {{-- <label id="e_tipo"></label> --}}
 
-                            <label>Tipo </label> >
-                           <input id="e_tipo" class="form-control" type="text" name="tipo"  value="" > 
-                            {{-- --}}
-                            
+                            <label>Tipo </label>
+                            <input id="e_tipo" class="form-control" type="hideen" name="tipo" value="">
+                            {{--  --}}
 
-                            
+
+
                         </div>
                         <div class="form group row">
                             <label>Nombre Tipo</label>
@@ -119,7 +120,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" id="name" class="btn btn-success waves-light"><i
-                                class="icofont icofont-check-circled" ></i></button>
+                                class="icofont icofont-check-circled">Actualiza</i></button>
                     </div>
                 </form>
             </div>

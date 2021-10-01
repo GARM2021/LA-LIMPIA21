@@ -11,54 +11,16 @@
 @endsection
 @section('content')
     <div class="table-responsive">
-        <table class="table table-striped ">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Opcion</th>
-                </tr>
-            </thead>
-            <tbody class="flex item-center">
-                <tr>
-                  <td>  <a class="btn btn-link" href="/colonias"> Colonias</a> </td>{{-- C4 --}}
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/gestores"> Gestores</a></td>
-                    
-                </tr>
-                <tr>
-                   <td> <a class="btn btn-link" href="/giros"> Giros</a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/subgiros"> Subgiros</a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/grupos"> Grupos </a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/tipos"> Tipos </a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/categos"> Categorias </a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/recargos"> Recargos </a></td>
-                    
-                </tr>
-                <tr>
-                  <td>  <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a></td>
-                    
-                </tr>
-                <tr>
-                   <td> <a class="btn btn-link" href="/cuentas"> Cuentas </a></td>
-                </tr>
-            </tbody>
-        </table>
+        <a class="btn btn-link" href="/colonias"> Colonias</a> </td>{{-- C4 --}}
+        <a class="btn btn-link" href="/gestores"> Gestores</a></td>
+        <a class="btn btn-link" href="/giros"> Giros</a></td>
+        <a class="btn btn-link" href="/subgiros"> Subgiros</a></td>
+        <a class="btn btn-link" href="/grupos"> Grupos </a></td>
+        <a class="btn btn-link" href="/tipos"> Tipos </a></td>
+        <a class="btn btn-link" href="/categos"> Categorias </a></td>
+        <a class="btn btn-link" href="/recargos"> Recargos </a></td>
+        <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a></td>
+        <a class="btn btn-link" href="/cuentas"> Cuentas </a></td>
     </div>
-    
+
 @endsection

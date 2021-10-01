@@ -1,5 +1,6 @@
 @extends('layouts.master') {{-- C2 L30 --}}
 @section('content')
+<div class="content">
     <h2>Show Categoria</h2>
 
     <form method="GET" action="{{ route('categos.index', ['catego' => $catego->catego]) }}">
@@ -34,4 +35,5 @@
             <button type="submit" class="btn btn-primary btn-lg">Indice de Categorias</button>
         </div>
     </form>
+</div>
 @endsection
