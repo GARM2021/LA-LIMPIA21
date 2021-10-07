@@ -29,7 +29,7 @@
                 <th>Fecha de Embargo</th>
                 <th>Grupo</th>
                 <th>Tipo</th>
-                <th> </th>
+                
 
 
 
@@ -92,7 +92,8 @@
         </tbody>
     </table>
 </div>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+{{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
+
 
 <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap4.min.js"></script>

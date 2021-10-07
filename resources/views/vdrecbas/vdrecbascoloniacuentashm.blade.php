@@ -16,10 +16,10 @@
 
             <a class="btn btn-success mb-3" href="{{ route('cuentas.create') }}">Create</a>
 
-            @include('components.cuenta-card');
-
+            @include('components.cuenta-card')
+        </div>
     @endif
-    </div>
+    
 @endsection
 
 </body>
