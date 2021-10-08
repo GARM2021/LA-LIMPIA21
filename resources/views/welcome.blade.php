@@ -10,17 +10,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="table-responsive">
-        <a class="btn btn-link" href="/colonias"> Colonias</a> </td>{{-- C4 --}}
-        <a class="btn btn-link" href="/gestores"> Gestores</a></td>
-        <a class="btn btn-link" href="/giros"> Giros</a></td>
-        <a class="btn btn-link" href="/subgiros"> Subgiros</a></td>
-        <a class="btn btn-link" href="/grupos"> Grupos </a></td>
-        <a class="btn btn-link" href="/tipos"> Tipos </a></td>
-        <a class="btn btn-link" href="/categos"> Categorias </a></td>
-        <a class="btn btn-link" href="/recargos"> Recargos </a></td>
-        <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a></td>
-        <a class="btn btn-link" href="/cuentas"> Cuentas </a></td>
+    <div class="content">
+
+        <img src="../escudoadmin21-24.jpeg"> 
+      
     </div>
 
 @endsection

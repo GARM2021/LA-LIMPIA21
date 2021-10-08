@@ -115,6 +115,12 @@ npm install
 npm run dev 
 --------------------------------------------------------------------------------------------
 C 13.1 DT Colonias
+Tutorial:
+01 - Cómo mostrar tablas profesionales con el plugin Datatables y Laravel
+Coders Free
+
+https://www.youtube.com/watch?v=xyGriTTRo_o&t=267s
+
 Me marcaba error 
 app.js:10601 jQuery.Deferred exception: Cannot read properties of undefined (reading 'mData') TypeError: Cannot read properties of undefined (reading 'mData')
 
@@ -132,6 +138,8 @@ Para el modal en tipos  se incluyo un boton   ok C 15.1 15.2
  ver ejemplomodal.blade.php
 
 ----------------------------------------------------------------------------------------------
+C 15.4  MODAL DINAMICO UPDATE solucionado asi :
+
 tbody tr:nth-child(odd) {
   background-color: #ff33cc;
 }
@@ -186,10 +194,10 @@ Your form:
 Desde ES6 (funciona a partir de >IE11) se puede usar el backtick ` para crear cadenas interpoladas:
 
 var resultado = `Pasado el tiempo, ${nombre} ${apellido} va a tener ${edad}` 
+--------------------------------------------------------------------------------------------
 
-/////////////////////////////////////////////////////////////////////////////////////
-esto no esta en el archivo se le borrara
-//////////////////////////////////////////////////////////////////////////////////
+C 17.1  <th> de mas en cuenta-card.blade.php puuuuf todo el dia :(
+--------------------------------------------------------------------------------------------
 
 
 
