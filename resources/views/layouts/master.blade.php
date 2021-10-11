@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {{-- --}}
-    
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+    {{--  --}}
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
@@ -102,19 +102,38 @@
 
     <div class="sidenav">
         <a href="">L I M P I A 21</a>
-       
-        <a class="btn btn-link" href="/colonias"> Colonias</a> {-- C4 --}}
-        <a class="btn btn-link" href="/gestores"> Gestores</a>
-        <a class="btn btn-link" href="/giros"> Giros</a>
-        <a class="btn btn-link" href="/subgiros"> Subgiros</a>
-        <a class="btn btn-link" href="/grupos"> Grupos </a>
-        <a class="btn btn-link" href="/tipos"> Tipos </a>
-        <a class="btn btn-link" href="/categos"> Categorias </a>
-        <a class="btn btn-link" href="/recargos"> Recargos </a>
-        <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a>
+
+
+
+
+        <div class="container">
+
+            <a href="#collapseOne" class="btn btn-link" data-toggle="collapse">Administrarivo</a>
+            <div id="collapseOne" class="collapse">
+
+
+
+                <a class="btn btn-link" href="/colonias"> Colonias</a>
+                <a class="btn btn-link" href="/gestores"> Gestores</a>
+                <a class="btn btn-link" href="/giros"> Giros</a>
+                <a class="btn btn-link" href="/subgiros"> Subgiros</a>
+                <a class="btn btn-link" href="/grupos"> Grupos </a>
+                <a class="btn btn-link" href="/tipos"> Tipos </a>
+                <a class="btn btn-link" href="/categos"> Categorias </a>
+                <a class="btn btn-link" href="/recargos"> Recargos </a>
+                <a class="btn btn-link" href="/tpocars"> Tipos de Cargos </a>
+
+            </div>
+
+        </div>
+
         <a class="btn btn-link" href="/cuentas"> Cuentas </a>
+
+
+
     </div>
-    
+
+
 
     @yield('content')
 

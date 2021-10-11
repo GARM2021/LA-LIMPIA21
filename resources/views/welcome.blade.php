@@ -10,9 +10,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="content">
+    <div class="container-sm">
 
-        <img src="../escudoadmin21-24.jpeg"> 
+        <img class="img-fluid mx-auto d-block  rounded-circle " src="../escudoadmin21-24.jpeg"> 
       
     </div>
 
