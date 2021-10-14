@@ -1,0 +1,311 @@
+USE gpe2019
+GO
+/****** Object:  Table basuramtpocar    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE DATABASE Limpia21;
+
+USE Limpia21;
+
+CREATE TABLE basuramtpocar (
+	tpocar char  (4) PRIMARY KEY NOT NULL,
+	descripcion varchar  (60) NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramtipos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramtipos (
+	tipo char  (2) PRIMARY KEY  NOT NULL,
+	descripcion varchar  (60) NOT NULL,
+	fecven char  (8) NOT NULL,
+	doctot float NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramsubgiro    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramsubgiro (
+	subgiro char  (4) PRIMARY KEY  NOT NULL,
+	nomsubgiro char  (40) NOT NULL,
+	giro char  (4) NOT NULL
+) ;
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramrecargos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramrecargos (
+	ayo char  (4) PRIMARY KEY  NOT NULL,
+	pctajerec float NOT NULL,
+	pctajerec2 float NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramgrupos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramgrupos (
+	grupo char  (2) PRIMARY KEY NOT NULL,
+	descripcion char  (60) NOT NULL,
+	fundamento char  (120) NULL
+) ;
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramgiro    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramgiro (
+	giro char  (4) PRIMARY KEY NOT NULL,
+	nomgiro char  (40) NOT NULL,
+	causarec char  (2) NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramgestor    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramgestor (
+	gestor char  (4)  PRIMARY KEY NOT NULL,
+	descripcion char  (60) NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramfoltid    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramfoltid (
+	foltid char  (2) NOT NULL,
+	tid float NOT NULL
+) PRIMARY KEY (foltid)); // pendiente 
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramfolios    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramfolios (
+	cvefol char  (2) PRIMARY KEY NOT NULL,
+	folio float NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramconbas    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramconbas (
+	con char  (4) PRIMARY KEY  NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramcolonia    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramcolonia (
+	colonia char  (4) PRIMARY KEY NOT NULL,
+	nomcol char  (40) NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuramcategos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuramcategos (
+	catego char  (8) PRIMARY KEY  NOT NULL,
+	descripcion char  (60) NOT NULL,
+	tarifa float NOT NULL,
+	kilos float NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table BASURAFOLDIREXP    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE BASURAFOLDIREXP (
+	BFDE_FOLIO int NULL,
+	BFDE_DIRECCION char  (40) NULL,
+	BFDE_COLONIA char  (40) NULL,
+	BFDE_EXP char  (14) NULL,
+	BFDE_DIRPRED char  (40) NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuradrecbasura    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuradrecbasura (
+	cuenta char  (8) PRIMARY KEY  NOT NULL,
+	giro char  (4) NOT NULL,
+	subgiro char  (4) NOT NULL,
+	nombre char  (40) NOT NULL,
+	direccion char  (40) NOT NULL,
+	nomciudad char  (30) NOT NULL,
+	nomcomer char  (40) NOT NULL,
+	ubicacion char  (40) NOT NULL,
+	colonia char  (4) NOT NULL,
+	finicio char  (8) NOT NULL,
+	numper char  (10) NOT NULL,
+	fperm char  (8) NOT NULL,
+	fbaja char  (8) NOT NULL,
+	fnotifica char  (8) NOT NULL,
+	gestor char  (4) NOT NULL,
+	expcat char  (8) NOT NULL,
+	ctaant char  (8) NOT NULL,
+	freq char  (8) NOT NULL,
+	cvereq float NOT NULL,
+	fembargo char  (8) NOT NULL,
+	rfc char  (20) NOT NULL,
+	telpart char  (14) NOT NULL,
+	telneg char  (14) NOT NULL,
+	grupo char  (2) NOT NULL,
+	tipo char  (2) NOT NULL
+) ;
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuradpagos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuradpagos (
+	cuenta char  (8) NOT NULL,
+	tpocar char  (4) NOT NULL,
+	ayo char  (4) NOT NULL,
+	catego char  (8) NOT NULL,
+	importe float NOT NULL,
+	recargos float NOT NULL,
+	bonif float NOT NULL,
+	bonrec float NOT NULL,
+	recibo char  (12) NOT NULL,
+	fpago char  (8) NOT NULL,
+	tid float PRIMARY KEY  NOT NULL ,
+	estatusmov float NOT NULL
+);
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuradbon    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuradbon (
+	tpocar char  (4) PRIMARY KEY  NOT NULL,
+	pctbonimp float NOT NULL,
+	pctbonrec float NOT NULL,
+	fecini char  (8) NOT NULL,
+	fecfin char  (8) NOT NULL,
+	estatus char  (2) NOT NULL
+) ;
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table basuradadeudos    Script Date: 08/12/2021 12:18:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE basuradadeudos (
+	cuenta char  (8) NOT NULL,
+	tpocar char  (4) NOT NULL,
+	ayo char  (4) NOT NULL,
+	catego char  (8) NOT NULL,
+	importe float NOT NULL,
+	saldo float NOT NULL,
+	fecven char  (8) NOT NULL,
+	tid bigint PRIMARY KEY  NOT NULL AUTO_INCREMENT, 
+	estatusmov float NOT NULL,
+	fechacap char  (8) NOT NULL,
+	deven numeric (1, 0) NULL,
+	fdeven datetime NULL,
+	reca float NULL,
+	freca datetime NULL,
+	fdevencon datetime NULL,
+	cantdeven float NULL,
+	fbaja char  (8) NULL,
+	devenbaja numeric (1, 0) NULL,
+	fdevenbaja datetime NULL
+) ;
+GO
+SET ANSI_PADDING OFF
+GO
+
+SELECT    fecha, recibo, caja, importe, bonimporte,recargos, bonrecargo,                      sanciones, bonsancion, gastos, bongastos,  otros, bonotros,  descpp, (importe - bonimporte + recargos - bonrecargo + sanciones- bonsancion +  gastos -  bongastos + otros -  bonotros -   descpp) AS total , con, referencia FROM         ingresdingresos
+WHERE (FECHA BETWEEN ('20210801', '20210823'))  AND CAJA = '0802'
