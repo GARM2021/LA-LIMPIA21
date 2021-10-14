@@ -24,6 +24,7 @@ class CategosRequest extends FormRequest
     public function rules()
     {
         return [
+            'catego' => ['required', 'max:08'],  //! C18 Faltaba esta linea
             'descripcion' => ['required', 'max:60'],
             'tarifa' => ['required', 'numeric',  'min:1'],
             'kilos' => ['required', 'integer', 'min:1'],

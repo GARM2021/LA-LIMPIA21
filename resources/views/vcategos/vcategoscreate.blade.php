@@ -13,7 +13,7 @@
                 <label>Descripcion</label>
                 <input class="form-control" type="text" name="descripcion" value="{{ old('descripcion') }}" required>
                 <label>Tarifa</label>
-                <input class="form-control" type="number" name="tarifa" value="{{ old('tarifa') }}" required>
+                <input class="form-control" type="number" step=".01" name="tarifa" value="{{ old('tarifa') }}" required>
                 <label>Kilos</label>
                 <input class="form-control" type="number" name="kilos" value="{{ old('kilos') }}" required>
 

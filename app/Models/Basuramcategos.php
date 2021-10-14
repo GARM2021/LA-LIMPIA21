@@ -11,6 +11,7 @@ class Basuramcategos extends Model
     protected $table = 'basuramcategos';// !C2
     protected $primaryKey = 'tid';   // !C2
     protected $fillable = [
+        'catego', //! C18 Faltaba esta linea 
         'descripcion',
         'tarifa',
         'kilos',

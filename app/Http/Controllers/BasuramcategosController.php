@@ -31,8 +31,9 @@ class BasuramcategosController extends Controller
 
     public function store(CategosRequest $request) //!C2 L17
     {
+        
         $catego = Basuramcategos::create($request->validated()); //! c49 asi quedo con formrequest
-
+        
         return redirect()
             ->route('categos.index') //! route Este es el recomendado es mas dificil que cambie el nombre de la route 
             ->withSuccess("The new catego with id {$catego->catego} was created succesx");  // ! C2
