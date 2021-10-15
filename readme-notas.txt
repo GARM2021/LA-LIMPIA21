@@ -198,7 +198,28 @@ var resultado = `Pasado el tiempo, ${nombre} ${apellido} va a tener ${edad}`
 
 C 17.1  <th> de mas en cuenta-card.blade.php puuuuf todo el dia :(
 --------------------------------------------------------------------------------------------
+C 19
 
+Clase 43 
+D:\xampp\htdocs\Laravel-desde-Cero>composer require laravel/ui //re run en casa
+
+D:\xampp\htdocs\Laravel-desde-Cero>php artisan ui --help  //re run en casa
+
+D:\xampp\htdocs\Laravel-desde-Cero>php artisan ui bootstrap --auth  //re run en casa
+
+D:\xampp\htdocs\Laravel-desde-Cero>php artisan migrate:fresh --seed  // genera los usuarios y refresca los productos //re run en casa
+
+                                        fresh    ---> borra todas las bases y las da de alta de nuevo
+                                        refresh  ---> borra las tablas que tienen down en los migrates y da de alta las que
+                                                      tienen archivo de migrate.php
+                                                      
+
+Clase 45
+npm --version
+
+npm install 
+
+npm run dev  // me marco erroS
 
 
 
