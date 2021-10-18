@@ -101,12 +101,14 @@
 <body>
 
     <div class="sidenav">
-        <a href="">L I M P I A 21</a>
+
+        {{--  <a href="">L I M P I A 21</a> --}}
+       
 
 
+        @include('components.login-card');
 
-
-        <div class="container">
+<div class="container">
 
             <a href="#collapseOne" class="btn btn-link" data-toggle="collapse">Administrarivo</a>
             <div id="collapseOne" class="collapse">
@@ -130,8 +132,9 @@
         <a class="btn btn-link" href="/cuentas"> Cuentas </a>
 
 
+    </div> 
 
-    </div>
+        
 
 
 

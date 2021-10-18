@@ -10,8 +10,16 @@ use PhpParser\Node\Stmt\Return_;
 
 class BasuramcategosController extends Controller
 {
+    public function __construct()
+    {
+        
+        $this->middleware('auth')->only('create'); //!C 21 
+       
+    }
+
     public function index()
     {
+      
         $categos = Basuramcategos::all();
         return view('vcategos.vcategosindex', compact('categos'));
     }
